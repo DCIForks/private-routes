@@ -14,10 +14,10 @@ import {
 // <<< WORKAROUND for deployment to GitHUB
 const PATH = "/private-routes" // repository name
 const p = {
-  home:     `${PATH}/`,
-  login:    `${PATH}/login`,
-  private1: `${PATH}/private1`,
-  private2: `${PATH}/private2`
+  home:    `${PATH}/`,
+  login:   `${PATH}/login`,
+  private: `${PATH}/private`,
+  secret:  `${PATH}/secret`
 }
 // WORKAROUND >>>
 
@@ -57,22 +57,22 @@ function App() {
           />
 
           <Route
-            path={p.private1}
+            path={p.private}
             element={
               <RequireLogin redirectTo={p.login}>
                 <Private
-                  text="Private Page #1"
+                  text="Private Page"
                 />
               </RequireLogin >
             }
           />
 
           <Route
-            path={p.private2}
+            path={p.secret}
             element={
               <RequireLogin redirectTo={p.login}>
                 <Private
-                  text="Private Page #2"
+                  text="Secrets"
                 />
               </RequireLogin >
             }
@@ -91,14 +91,14 @@ function Menu({hideLogOut}) {
   if (loggedIn) {
     if (!hideLogOut) {
       return <ul>
-        <li><NavLink to={p.private1}>Private #1</NavLink></li>
-        <li><NavLink to={p.private2}>Private #2</NavLink></li>
+        <li><NavLink to={p.private}>Private Page</NavLink></li>
+        <li><NavLink to={p.secret}>Secrets</NavLink></li>
         <li><NavLink to={p.login}>Log Out</NavLink></li>
       </ul>
     } else {
       return <ul>
-        <li><NavLink to={p.private1}>Private #1</NavLink></li>
-        <li><NavLink to={p.private2}>Private #2</NavLink></li>
+        <li><NavLink to={p.private}>Private Page</NavLink></li>
+        <li><NavLink to={p.secret}>Secrets</NavLink></li>
       </ul>
     }
   } else {
