@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/private-routes/static/js/main.79f6aa1d.js",
+    "main.js": "/private-routes/static/js/main.16b6f85c.js",
     "index.html": "/private-routes/index.html",
-    "main.79f6aa1d.js.map": "/private-routes/static/js/main.79f6aa1d.js.map"
+    "main.16b6f85c.js.map": "/private-routes/static/js/main.16b6f85c.js.map"
   },
   "entrypoints": [
-    "static/js/main.79f6aa1d.js"
+    "static/js/main.16b6f85c.js"
   ]
 }
